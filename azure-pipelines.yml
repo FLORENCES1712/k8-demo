@@ -19,6 +19,8 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Docker@2
   inputs:
+    containerRegistry: 'DockerHubConnection'
+    repository: 'florencebf17'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'
