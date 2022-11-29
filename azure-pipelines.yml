@@ -22,4 +22,4 @@ steps:
     containerRegistry: 'DockerHubConnection'
     command: 'build'
     Dockerfile: '**/Dockerfile'
-    tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'/$(Build.BuildId)'
+    tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'
