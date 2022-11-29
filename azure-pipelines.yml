@@ -20,7 +20,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHubConnection'
-    repository: 'florencebf17'
-    command: 'buildAndPush'
+    command: 'build'
     Dockerfile: '**/Dockerfile'
-    tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'
+    tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'/$(Build.BuildId)'
