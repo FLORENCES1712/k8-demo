@@ -27,5 +27,5 @@ steps:
     repository: 'florencebf17/myimage'
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
-    tags: 'florencebf17/myimage:$(Build.BuildId)'
+    tags: '$(Build.BuildId)'
 
