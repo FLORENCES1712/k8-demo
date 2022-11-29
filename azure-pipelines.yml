@@ -23,3 +23,8 @@ steps:
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerHubConnection'
+    command: 'push'
+    tags: '$(Build.SourcesDirectory)/$(Build.BuildId)'
