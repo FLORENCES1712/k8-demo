@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: florenceskdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: florenceskdemo
+  template:
+    metadata:
+      labels:
+        app: florenceskdemo 
+    spec:
+      containers:
+        - name: florenceskdemo 
+          image: florenceacs.azurecr.io/florenceskdemo
+          ports:
+          - containerPort: 80
