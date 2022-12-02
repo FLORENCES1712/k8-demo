@@ -28,4 +28,13 @@ steps:
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
     tags: '$(Build.BuildId)'
-
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'localkubeconnection'
+    namespace: 'default'
+    strategy: 'canary'
+    percentage: '50'
+    manifests: 'pod.yaml'
+    containers: '2'
+    rolloutStatusTimeout: '1'
