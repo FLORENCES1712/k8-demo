@@ -1,8 +1,0 @@
-- task: KubernetesManifest@0
-  inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'localkubeconnection'
-    namespace: 'default'
-    strategy: 'canary'
-    percentage: '100'
-    manifests: 'pod.yaml'
