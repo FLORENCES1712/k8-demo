@@ -1,0 +1,77 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "fhlbctrial-func",
+        "description": "Import from \"fhlbctrial-func\" Function App",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://fhlbctrial-apim.azure-api.net/fhlbctrial-func"
+        }
+    ],
+    "paths": {
+        "/HttpTrigger1": {
+            "get": {
+                "summary": "HttpTrigger1",
+                "operationId": "get-httptrigger1",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            },
+            "post": {
+                "summary": "HttpTrigger1",
+                "operationId": "post-httptrigger1",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        },
+        "/HttpTrigger1-1": {
+            "get": {
+                "summary": "HttpTrigger1-1",
+                "operationId": "get-httptrigger1-1",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            },
+            "post": {
+                "summary": "HttpTrigger1-1",
+                "operationId": "post-httptrigger1-1",
+                "responses": {
+                    "200": {
+                        "description": null
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiKeyHeader": {
+                "type": "apiKey",
+                "name": "Ocp-Apim-Subscription-Key",
+                "in": "header"
+            },
+            "apiKeyQuery": {
+                "type": "apiKey",
+                "name": "subscription-key",
+                "in": "query"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKeyHeader": []
+        },
+        {
+            "apiKeyQuery": []
+        }
+    ]
+}
